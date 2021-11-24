@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.kodo.api
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [annotation-api, app-name, assertj, data, data-jpa, gradle, graphql, hamcrest, http-client, jdbc-hikari, junit, kotlin, kotlin-application, kotlin-build, logback, micronaut-build, mockito, netty-server, openapi, postgres, properties, readme, shade, testcontainers]
