@@ -15,6 +15,10 @@ class FeedRepositoryImpl(private val feedJPARepository: FeedJPARepository<FeedEn
         for (feed in feedList) {
             feedEntityList.add(FeedStateAdapter.encode(feed.state))
         }
-        feedJPARepository.saveAll(feedEntityList)
+        try {
+            feedJPARepository.saveAll(feedEntityList)
+        } catch (e: Exception) {
+            throw RuntimeException("Unable to store data $e")
+        }
     }
 }

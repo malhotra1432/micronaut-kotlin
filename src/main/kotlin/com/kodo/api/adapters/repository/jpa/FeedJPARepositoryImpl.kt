@@ -8,6 +8,10 @@ import java.io.File
 @Singleton
 class FeedJPARepositoryImpl : FeedJPARepository<FeedEntity> {
     override fun saveAll(data: List<FeedEntity>) {
-        File("demo.json").writeText(FeedStateAdapter.encodeFeedEntityToJSON(data))
+        try {
+            File("data.json").writeText(FeedStateAdapter.encodeFeedEntityToJSON(data))
+        } catch (e: Exception) {
+            throw RuntimeException("Unable to store data $e")
+        }
     }
 }

@@ -14,6 +14,10 @@ class FeedServiceImpl(private val feedRepository: FeedRepository) : FeedService 
         for (createFeed in createFeedList) {
             feedList.add(Feed.create(createFeed))
         }
-        feedRepository.saveAll(feedList)
+        try {
+            feedRepository.saveAll(feedList)
+        } catch (e: Exception) {
+            throw RuntimeException("Unable to store data $e")
+        }
     }
 }

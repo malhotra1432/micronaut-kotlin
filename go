@@ -32,8 +32,8 @@ task_test() {
   process_command_chain "$@"
 }
 
-task_bootRun(){
-./gradlew bootRun
+task_run(){
+./gradlew run
 }
 
 task_usage(){
@@ -59,6 +59,6 @@ case "${CMD}" in
     build) task_build "$@" ;;
     go) clean build "$@" ;;
     test) task_test "$@" ;;
-    bootRun) task_bootRun "$@" ;;
+    run) task_run "$@" ;;
     *) task_usage ;;
 esac
