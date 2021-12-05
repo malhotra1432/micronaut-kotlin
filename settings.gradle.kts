@@ -1,2 +1,2 @@
 
-rootProject.name="kodo-api"
+rootProject.name = "kodo-api"

@@ -17,12 +17,11 @@ data class FeedEntity(
         var image: String,
         var dateLastEdited: Instant
     ) {
-        fun name(name: String) = apply { this.name = name}
+        fun name(name: String) = apply { this.name = name }
         fun description(description: String) = apply { this.description = description }
         fun image(image: String) = apply { this.image = image }
         fun dateLastEdited(dateLastEdited: Instant) = apply { this.dateLastEdited = dateLastEdited }
         fun build() =
             FeedEntity(name, description, image, dateLastEdited)
     }
-
 }

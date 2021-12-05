@@ -10,8 +10,8 @@ import java.time.Instant
 @OptIn(ExperimentalSerializationApi::class)
 @Serializer(forClass = Instant::class)
 object GlobalSerializer : KSerializer<Instant> {
-    override fun deserialize(decoder: Decoder): Instant
-            = Instant.parse(decoder.decodeString())
+    override fun deserialize(decoder: Decoder): Instant =
+        Instant.parse(decoder.decodeString())
 
     override fun serialize(encoder: Encoder, value: Instant) {
         encoder.encodeString(value.toString())

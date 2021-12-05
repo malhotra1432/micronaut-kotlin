@@ -6,7 +6,7 @@ import jakarta.inject.Singleton
 import java.io.File
 
 @Singleton
-class FeedJPARepositoryImpl: FeedJPARepository<FeedEntity> {
+class FeedJPARepositoryImpl : FeedJPARepository<FeedEntity> {
     override fun saveAll(data: List<FeedEntity>) {
         File("demo.json").writeText(FeedStateAdapter.encodeFeedEntityToJSON(data))
     }

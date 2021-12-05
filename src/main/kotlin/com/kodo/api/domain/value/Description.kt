@@ -1,8 +1,8 @@
 package com.kodo.api.domain.value
 
-class Description(val description: String){
+class Description(val description: String) {
     companion object {
-        fun create(description: String): Description{
+        fun create(description: String): Description {
             return Description(description)
         }
     }

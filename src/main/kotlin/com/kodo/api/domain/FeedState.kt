@@ -6,10 +6,10 @@ import com.kodo.api.domain.value.Name
 import java.time.Instant
 
 class FeedState private constructor(
-     val name: Name,
-     val description: Description,
-     val image: Image,
-     val dateLastEdited: Instant
+    val name: Name,
+    val description: Description,
+    val image: Image,
+    val dateLastEdited: Instant
 ) {
 
     data class FeedStateBuilder(

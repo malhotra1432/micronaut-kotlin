@@ -13,5 +13,4 @@ class Feed(val state: FeedState) {
             return Feed(feedState)
         }
     }
-
 }

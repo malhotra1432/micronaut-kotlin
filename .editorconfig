@@ -1,0 +1,9 @@
+[*.{kt,kts}]
+disabled_rules=import-ordering
+disabled_rules=no-wildcard-imports
+
+# Note that in this case 'import-ordering' rule will be active and 'indent' will be disabled
+[api/*.{kt,kts}]
+disabled_rules=indent
+
+

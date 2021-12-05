@@ -6,11 +6,11 @@ import com.kodo.api.domain.value.Image
 import com.kodo.api.domain.value.Name
 import java.time.Instant
 
-data class CreateFeedMessage (
-     private val name: String,
-     private val description: String,
-     private val image: String,
-     private val dateLastEdited: Instant
+data class CreateFeedMessage(
+    private val name: String,
+    private val description: String,
+    private val image: String,
+    private val dateLastEdited: Instant
 ) {
     fun toCreateFeed(createFeedMessage: CreateFeedMessage): CreateFeed {
         return CreateFeed.CreateFeedBuilder(
