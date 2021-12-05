@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.jpa") version "1.5.21"
     id("com.github.johnrengelman.shadow") version "7.1.0"
     id("io.micronaut.application") version "2.0.8"
+    kotlin("plugin.serialization") version "1.5.0"
 }
 
 version = "0.1"
@@ -29,6 +30,10 @@ dependencies {
     kapt("io.micronaut.data:micronaut-data-processor:3.1.2")
     implementation("io.micronaut:micronaut-http-client:3.1.4")
     implementation("io.micronaut:micronaut-runtime:3.1.4")
+    implementation ("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.3.1")
+
 //    implementation("io.micronaut.data:micronaut-data-hibernate-jpa:3.1.2")
     implementation("io.micronaut.graphql:micronaut-graphql:3.0.0")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime:3.0.0")
