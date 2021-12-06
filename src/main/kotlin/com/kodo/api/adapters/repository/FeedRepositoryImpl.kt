@@ -21,4 +21,12 @@ class FeedRepositoryImpl(private val feedJPARepository: FeedJPARepository<FeedEn
             throw RuntimeException("Unable to store data $e")
         }
     }
+
+    override fun findAll(): List<FeedEntity> {
+        try {
+            return feedJPARepository.findAll()
+        } catch (e: Exception) {
+            throw RuntimeException("Unable to store data $e")
+        }
+    }
 }

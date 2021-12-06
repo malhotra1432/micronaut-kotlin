@@ -1,5 +1,6 @@
 package com.kodo.api.domain.service
 
+import com.kodo.api.adapters.entity.FeedEntity
 import com.kodo.api.domain.Feed
 import com.kodo.api.domain.command.CreateFeed
 import com.kodo.api.domain.ports.FeedRepository
@@ -18,6 +19,14 @@ class FeedServiceImpl(private val feedRepository: FeedRepository) : FeedService 
             feedRepository.saveAll(feedList)
         } catch (e: Exception) {
             throw RuntimeException("Unable to store data $e")
+        }
+    }
+
+    override fun fetchFeeds(): List<FeedEntity> {
+        try {
+            return feedRepository.findAll()
+        } catch (e: Exception) {
+            throw RuntimeException("Unable to Fetch data $e")
         }
     }
 }

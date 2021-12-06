@@ -17,6 +17,10 @@ class FeedStateAdapter {
             return Json.encodeToString(feedEntityList)
         }
 
+        // fun DecodeJSONToFeedEntity(): FeedEntity {
+        //     return Json.decodeFromJsonElement()
+        // }
+
         fun encode(feedState: FeedState): FeedEntity {
             return FeedEntity.FeedEntityBuilder(
                 feedState.name.name,
